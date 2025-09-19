@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Srinithi D — Resume</title>
+
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Libre+Franklin:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #ffffff;
+      --text: #222;
+      --muted: #6b6b6b;
+      --accent: #5e9b98; /* teal similar to image */
+      --card-bg: transparent;
+      --max-width: 900px;
+      --left-width: 280px;
+      --gap: 28px;
+      --page-padding: 28px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      font-family: "Libre Franklin", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color:var(--text);
+      background:var(--bg);
+      padding:24px;
+      display:flex;
+      justify-content:center;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    /* Main container */
+    .resume{
+      width:100%;
+      max-width:var(--max-width);
+      background:var(--bg);
+      padding:var(--page-padding);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+    }
+
+    /* Header */
+    .resume-header{
+      text-align:center;
+      margin-bottom:22px;
+    }
+    .name{
+      font-family: "Montserrat", "Libre Franklin", sans-serif;
+      letter-spacing:2px;
+      font-size:28px;
+      margin:0;
+      font-weight:700;
+    }
+    .subtitle{
+      font-size:14px;
+      font-weight:600;
+      color:var(--muted);
+      margin-top:6px;
+      text-transform:lowercase;
+    }
+    .accent-bar{
+      height:16px;
+      width:56%;
+      max-width:420px;
+      margin:16px auto 0;
+      background:var(--accent);
+      border-radius:2px;
+      opacity:0.95;
+    }
+
+    /* Columns layout */
+    .columns{
+      display:flex;
+      gap:var(--gap);
+      align-items:flex-start;
+    }
+
+    /* Left narrow column */
+    .col-left{
+      width:var(--left-width);
+      min-width:220px;
+    }
+
+    /* Right wide column */
+    .col-right{
+      flex:1;
+    }
+
+    /* Cards/sections */
+    .card{
+      padding:6px 0 16px 0;
+      margin-bottom:18px;
+    }
+    .section-title{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:700;
+      font-size:13px;
+      letter-spacing:0.6px;
+      color:var(--text);
+      margin:0 0 12px 0;
+    }
+
+    /* Simple triangle arrow to left of titles similar to image */
+    .section-title::before{
+      content:"";
+      display:inline-block;
+      width:12px;
+      height:12px;
+      transform:rotate(45deg);
+      background:var(--accent);
+      border-radius:2px;
+      margin-right:6px;
+    }
+
+    /* lists */
+    .bullets{
+      margin:0;
+      padding-left:18px;
+      color:var(--muted);
+      font-size:14px;
+    }
+    .bullets li{
+      margin:8px 0;
+      line-height:1.45;
+    }
+
+    /* contact */
+    .contact-item{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      color:var(--muted);
+      font-size:14px;
+      margin:8px 0;
+    }
+    .contact-item .icon{
+      width:18px;height:18px;flex:0 0 18px;stroke:var(--muted);fill:none;stroke-width:1.4;
+    }
+
+    /* education */
+    .edu-item{
+      color:var(--muted);
+      font-size:14px;
+    }
+    .edu-school{
+      font-weight:700;
+      text-transform:uppercase;
+      font-size:13px;
+      color:var(--text);
+    }
+    .edu-sub{
+      font-style:italic;
+      margin:6px 0;
+      font-size:13px;
+      color:var(--muted);
+    }
+    .edu-course{font-size:13px;color:var(--muted);margin-top:6px}
+
+    /* two-columns card (language & skills side-by-side) */
+    .two-columns{
+      display:flex;
+      gap:28px;
+    }
+    .two-columns > div{flex:1}
+
+    /* small print footer */
+    .print-note{
+      margin-top:10px;
+      font-size:12px;
+      color:#999;
+      text-align:center;
+    }
+
+    /* Responsive */
+    @media (max-width:820px){
+      .columns{
+        flex-direction:column;
+      }
+      .col-left{
+        width:auto;
+      }
+      .accent-bar{width:80%}
+      .two-columns{flex-direction:row; gap:18px}
+    }
+    @media (max-width:520px){
+      .two-columns{flex-direction:column}
+      .name{font-size:20px}
+      .subtitle{font-size:13px}
+    }
+  </style>
+</head>
+<body>
+  <main class="resume">
+    <!-- Header -->
+    <header class="resume-header">
+      <h1 class="name">SRINITHI D</h1>
+      <div class="subtitle">student</div>
+      <div class="accent-bar" aria-hidden="true"></div>
+    </header>
+
+    <!-- Content columns -->
+    <div class="columns">
+      <!-- Left column -->
+      <aside class="col col-left">
+        <section class="card profile">
+          <h2 class="section-title">PROFILE</h2>
+          <ul class="bullets">
+            <li>Computer science student.</li>
+            <li>I consider myself a responsible and orderly person.</li>
+            <li>I am looking forward to my first work experience.</li>
+          </ul>
+        </section>
+
+        <section class="card contact">
+          <h2 class="section-title">CONTACT ME</h2>
+          <div class="contact-item">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M21 8v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8"></path><path d="M7 8l5 3 5-3"></path></svg>
+            <a href="mailto:srinithid24cse@vetias.ac.in">srinithid24cse@vetias.ac.in</a>
+          </div>
+          <div class="contact-item">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12S3 16 3 10A9 9 0 0 1 21 10z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <address>4/16, Karaiyampudhur, Veeranampalayam, Namakkal</address>
+          </div>
+        </section>
+      </aside>
+
+      <!-- Right column -->
+      <section class="col col-right">
+        <section class="card education">
+          <h2 class="section-title">EDUCATION</h2>
+          <div class="edu-item">
+            <div class="edu-school">BHARATHIYAR UNIVERSITY</div>
+            <div class="edu-sub">VET Institute of arts &amp; science (co-education) college</div>
+            <div class="edu-course">School of computing — Bachelor of computer science (2024–2027)</div>
+          </div>
+        </section>
+
+        <section class="card two-columns">
+          <div>
+            <h2 class="section-title">LANGUAGE</h2>
+            <ul class="bullets">
+              <li>Native Tamil</li>
+              <li>Advanced English</li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="section-title">SKILLS</h2>
+            <ul class="bullets">
+              <li>Programming (C)</li>
+              <li>Java full stack</li>
+              <li>Python</li>
+              <li>C++</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="card certification">
+          <h2 class="section-title">CERTIFICATION</h2>
+          <ul class="bullets">
+            <li>mango db</li>
+            <li>C for beginners</li>
+            <li>Smart English basics for professionals</li>
+            <li>Types of cybersecurity</li>
+          </ul>
+        </section>
+      </section>
+    </div>
+
+    <footer class="print-note">Resume generated from image — HTML/CSS rendition</footer>
+  </main>
+</body>
+</html>
